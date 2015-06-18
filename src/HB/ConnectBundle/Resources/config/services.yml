@@ -1,0 +1,14 @@
+services:
+    hb_connect.registration.form.type:
+        class: HB\ConnectBundle\Form\RegistrationFormType
+        tags:
+            - { name: form.type, alias: hb_connect_registration }
+    hb_connect.group.form.type:
+         class: HB\ConnectBundle\Form\GroupFormType
+         tags:
+             - { name: form.type, alias: hb_connect_user_group }
+         argument: %hb_connect.Entity.group.class%
+
+#    hb_connect.example:
+#        class: HB\ConnectBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,92 @@
+
+array (size=2)
+  0 => 
+    object(stdClass)[441]
+      public '__CLASS__' => string 'HB\NewsFeedBundle\Entity\News' (length=29)
+      public 'id' => int 1
+      public 'type' => string 'news' (length=4)
+      public 'text' => string 'Coucou comment sa va' (length=20)
+      public 'date' => 
+        object(stdClass)[632]
+          public '__CLASS__' => string 'DateTime' (length=8)
+          public 'date' => string '2015-03-12T00:00:00+01:00' (length=25)
+          public 'timezone' => string 'Europe/Paris' (length=12)
+      public 'user' => 
+        object(stdClass)[631]
+          public '__CLASS__' => string 'HB\ConnectBundle\Entity\User' (length=28)
+          public '__IS_PROXY__' => boolean true
+          public '__PROXY_INITIALIZED__' => boolean false
+          public 'id' => string '2' (length=1)
+          public 'city' => null
+          public 'gl_reputation' => null
+          public 'country' => null
+          public 'creation_date' => null
+          public 'mgroups' => null
+          public 'friends' => null
+          public 'friendOf' => null
+          public 'birth_date' => null
+          public 'news' => null
+          public 'recommandations' => null
+          public 'username' => null
+          public 'usernameCanonical' => null
+          public 'email' => null
+          public 'emailCanonical' => null
+          public 'enabled' => null
+          public 'salt' => null
+          public 'password' => null
+          public 'plainPassword' => null
+          public 'lastLogin' => null
+          public 'confirmationToken' => null
+          public 'passwordRequestedAt' => null
+          public 'groups' => null
+          public 'locked' => null
+          public 'expired' => null
+          public 'expiresAt' => null
+          public 'roles' => null
+          public 'credentialsExpired' => null
+          public 'credentialsExpireAt' => null
+  1 => 
+    object(stdClass)[633]
+      public '__CLASS__' => string 'HB\NewsFeedBundle\Entity\News' (length=29)
+      public 'id' => int 2
+      public 'type' => string 'news' (length=4)
+      public 'text' => string 'teedddddddddddd' (length=15)
+      public 'date' => 
+        object(stdClass)[630]
+          public '__CLASS__' => string 'DateTime' (length=8)
+          public 'date' => string '2015-02-28T00:00:00+01:00' (length=25)
+          public 'timezone' => string 'Europe/Paris' (length=12)
+      public 'user' => 
+        object(stdClass)[602]
+          public '__CLASS__' => string 'HB\ConnectBundle\Entity\User' (length=28)
+          public '__IS_PROXY__' => boolean true
+          public '__PROXY_INITIALIZED__' => boolean false
+          public 'id' => string '2' (length=1)
+          public 'city' => null
+          public 'gl_reputation' => null
+          public 'country' => null
+          public 'creation_date' => null
+          public 'mgroups' => null
+          public 'friends' => null
+          public 'friendOf' => null
+          public 'birth_date' => null
+          public 'news' => null
+          public 'recommandations' => null
+          public 'username' => null
+          public 'usernameCanonical' => null
+          public 'email' => null
+          public 'emailCanonical' => null
+          public 'enabled' => null
+          public 'salt' => null
+          public 'password' => null
+          public 'plainPassword' => null
+          public 'lastLogin' => null
+          public 'confirmationToken' => null
+          public 'passwordRequestedAt' => null
+          public 'groups' => null
+          public 'locked' => null
+          public 'expired' => null
+          public 'expiresAt' => null
+          public 'roles' => null
+          public 'credentialsExpired' => null
+          public 'credentialsExpireAt' => null

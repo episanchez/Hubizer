@@ -1,0 +1,36 @@
+<?php
+// src/Acme/MessageBundle/Entity/MessageMetadata.php
+
+namespace HB\PrivateMessageBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use FOS\MessageBundle\Entity\MessageMetadata as BaseMessageMetadata;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="msg_message_metadata")
+ */
+class MessageMetadata extends BaseMessageMetadata
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\ManyToOne(
+     *   targetEntity="Message",
+     *   inversedBy="metadata"
+     * )
+     * @var \FOS\MessageBundle\Model\MessageInterface
+     */
+    protected $message;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="HB\ConnectBundle\Entity\User")
+     * @var \FOS\MessageBundle\Model\ParticipantInterface
+     */
+    protected $participant;
+}

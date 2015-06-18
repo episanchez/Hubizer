@@ -1,0 +1,73 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block begin_m %}
+<div id="main-wrapper">
+				<div id="main" class="container">
+					<div class="row">
+						<div class="9u important(collapse)">
+							<div class="content content-left">
+							<article class="box page-content">
+							<section>
+							<center>
+
+{% endblock %}
+{% block fos_user_content %}
+{% trans_default_domain 'FOSUserBundle' %}
+	<header> 
+	<img src="https://cdn.local.epitech.eu/userprofil/profilview/quilla_c.jpg">
+	<h2> {{ user.username }} </h2> </header>
+	<section>
+		<h3>Présentation</h3>
+		<p>Date de naissance : {{ user.getBirthDate().format("d/m/Y") }}
+		<br>Ville : {{ user.city }}
+		<br>Pays : {{ user.country }}
+		<br>Réputation Globale : <img src="http://www.menzzo.fr/skin/frontend/default/dashing/images/etoiles-truspilot_5.gif" align="middle">
+		<br>Membre depuis le : {{ user.getCreationDate().format("d/m/Y") }}</p>
+		</p>
+	</section>
+	<section>
+		<h3>Recommandation</h3>
+		<p>
+			{% if recommandation is defined %}
+				<p> it is ok</p>
+			{% else %}
+				<p> it is not defined </p>
+			{% endif %}
+		</p>
+	</section>
+    {% block javascripts %}
+    	{% include 'FOSCommentBundle:Thread:async.html.twig' with {'id' : 'fool'} %}
+    {% endblock %}
+{% endblock fos_user_content %}
+
+{% block end_m %}
+</center>
+</section>
+</article>
+</div>
+</div>
+		<div class="3u">
+							<div class="sidebar">
+							
+								<!-- Sidebar -->
+							
+									<!-- Recent Posts -->
+										<section>
+											<h2 class="major"><span>Gestion utilisateur</span></h2>
+											<ul class="divided">
+												<li>
+												<a href={{ path('fos_user_profile_edit') }} class="button alt">Editer mon profil</a>
+												</li>
+												<li>
+												<a href="{{ path('fos_user_group_new') }}" class="button alt">Creer un hub</a>
+												</li>
+											</ul>
+										</section>
+
+							</div>
+						</div>
+							
+			</div>
+		</div>
+</div>
+{% endblock %}

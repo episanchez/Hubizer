@@ -1,0 +1,2 @@
+parameters:
+    hb.news_feed.news_manager.class: HB\NewsFeedBundle\Entity\NewsManager

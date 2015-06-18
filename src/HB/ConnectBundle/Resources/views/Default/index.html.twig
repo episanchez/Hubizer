@@ -1,0 +1,32 @@
+{% extends "HBConnectBundle::layout.html.twig" %}
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+{% block bundle_block %}
+    <div id="banner-wrapper">
+				<section id="banner">
+					<h2>Hubizer : Créez - Rejoignez - Partagez</h2>
+					<p>Hubizer est une plateforme qui permet aux gens de rencontrer des personnes ayant les mêmes passions</p>
+			<a  class="button" href="{{ path('fos_user_registration_register') }}">Commencer</a>
+			
+				</section>
+			</div>
+			{% block begin_m %} {{ parent() }} {% endblock %}
+		<!-- Main -->		
+							<!-- Highlight -->
+								<section class="box highlight">
+									<ul class="special">
+									<img src="{{ asset('bundles/hbconnect/images/logo.jpg') }}" alt="" />
+									</ul>
+									<header>
+										<h2>Hubizer en quelques mots</h2>
+										<p>Trouver quelqu'un avec qui partager vos passions n'importe quand et n'importe où !</p>
+									</header>
+									<p>
+Hubizer est un site communautaire permettant aux utilisateurs de partager et d’exercer leurs passions sous forme de groupes créés et gérés par des utilisateurs.
+</br>Sur Hubizer vous pourrez créer ou rejoindre les hubs qui vous intéressent, afin de discuter et/ou de participer à des évènements organisés par le hub.
+</br> Que ce soit pour des évènements sportifs ou simplement pour rencontrer des gens partageant une même passion, Hubizer est fait pour vous !
+									</p>
+								</section>
+						{% block end_m %} {{ parent() }} {% endblock %}
+{% endblock %}

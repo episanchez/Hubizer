@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>{% block title %}Hubizer{% endblock %}</title>
+  <link rel="stylesheet" href="{{ asset('bundles/hbconnect/css/skel.css') }}" />
+  <link rel="stylesheet" href="{{ asset('bundles/hbconnect/css/style.css') }}" />
+  <link rel="stylesheet" href="{{ asset('bundles/hbconnect/css/style-desktop.css') }}" />
+  <link rel="shortcut icon" href="{{ asset('bundles/hbconnect/images/logo.jpg') }}" />
+</head>
+<body class="homepage">
+		<script src="{{ asset('bundles/hbconnect/js/jquery.min.js') }}"></script>
+		<script src="{{ asset('bundles/hbconnect/js/jquery.dropotron.min.js') }}"></script>
+		<script src="{{ asset('bundles/hbconnect/js/skel.min.js') }}"></script>
+		<script src="{{ asset('bundles/hbconnect/js/skel-layers.min.js') }}"></script>
+		<script src="{{ asset('bundles/hbconnect/js/init.js') }}"></script>
+<header id="header">
+	<a href="{{ path("_welcome") }}"><img src="{{ asset('bundles/hbconnect/images/hubizer.jpg') }}" alt="test" /></br></a>
+</header>
+<nav id="nav" class="skel-layers-fixed">
+	<ul>
+		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+			{% block nav %}
+			<li class="current"><a href="{{ path("hb_news_feed_homepage") }}">Fil d'actualité</a></li>
+			<li><a href="{{ path("fos_user_profile_show") }}">Mon Profil</a>
+			<li><a href="{{ path("hb_search_homepage", {'name' : 'charlie'}) }}">Recherche</a></li>
+			<li><a href="#">Mes messages</a></li>
+			<li><a href="{{ path("fos_user_security_logout") }}">Logout</a></li>
+			{% endblock %}
+		{% else %}
+			<form style="margin: 0; padding: 0;" action="{{ path("fos_user_security_check") }}" method="post">
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" />
+				Pseudo <input style="display: inline;width: 200px;" type="text" name="_username" id="pseudo">
+				Password <input style="display: inline;width: 200px;" type="password" name="_password" id="password">
+				Se Souvenir<input style="display: inline;width: 20px;" type="checkbox" id="remember_me" name="_remember_me" value="on" />
+				<input style="display: inline;width: 200px;" type="submit" id="_submit" name="_submit" value="Connexion" />
+			</form>
+		{% endif %}
+	</ul>
+</nav>
+{% block bundle_block %}
+{% endblock %}
+<footer id="footer" class="container">
+				<div class="row double">
+					<div class="12u">
+
+						<!-- Contact -->
+							<section>
+								<h2 class="major"><span>Nous contacter:</span></h2>
+								<ul class="contact">
+									<li><a class="icon fa-facebook" href="https://www.facebook.com/hubizer"><span class="label">Facebook</span></a></li>
+									<li><a class="icon fa-twitter" href="https://twitter.com/hubizer"><span class="label">Twitter</span></a></li>
+								</ul>
+							</section>
+					
+					</div>
+				</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul class="menu">
+							<li>© Hubizer. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends "HBNewsFeedBundle::layout.html.twig" %}
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+{% block bundle_block %}
+	{% for newsfriend in newsfriends %}
+		<li> {{ newsfriend.text }} </li>
+	{% endfor %}
+{% endblock %}
